@@ -1,0 +1,21 @@
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    height: 80vh;
+}
+.button{
+    width: 200px;
+    padding: 15px;
+    cursor: pointer;
+    background-color: #53c28b;
+    border: none;
+    border-radius: 5px;
+    color: #eee;
+    font-weight: bold;
+}
+.container h1 span{
+    color: #53c28b;
+}
