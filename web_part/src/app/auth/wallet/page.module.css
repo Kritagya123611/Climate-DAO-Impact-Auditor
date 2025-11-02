@@ -1,0 +1,108 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding-top: 80px;
+  background: radial-gradient(circle at top, #0f2027, #203a43, #2c5364);
+  color: #e6ffee;
+  gap: 28px;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+}
+
+.title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #00ffcc, #36d1dc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px rgba(0, 255, 204, 0.4);
+}
+
+.subtitle {
+  color: #a8dadc;
+  font-size: 1.1rem;
+  margin-top: -10px;
+}
+
+.optionButton {
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.addButton {
+  margin-top: 2rem;
+  box-shadow: 0 0 12px rgba(72, 187, 120, 0.6);
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  transition: all 0.3s ease;
+}
+
+.formContainer {
+  background: rgba(20, 30, 35, 0.85);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 255, 204, 0.2);
+  border-radius: 20px;
+  width: 400px;
+  padding: 32px;
+  box-shadow: 0 0 25px rgba(0, 255, 204, 0.15);
+  animation: fadeIn 0.5s ease;
+}
+
+.projectFormInput {
+  background: rgba(15, 20, 25, 0.8);
+  border: 1px solid #2c736f;
+  color: #e6ffee;
+  border-radius: 12px;
+  padding: 12px;
+  outline: none;
+  transition: border 0.25s ease;
+}
+
+.projectFormInput:focus {
+  border-color: #00ffcc;
+  box-shadow: 0 0 8px rgba(0, 255, 204, 0.3);
+}
+
+.submitButton {
+  background: linear-gradient(90deg, #00c9a7, #92fe9d);
+  color: #002b28;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  padding: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submitButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 16px rgba(0, 255, 204, 0.5);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 500px) {
+  .formContainer {
+    width: 90%;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+}

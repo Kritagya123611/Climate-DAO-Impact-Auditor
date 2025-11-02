@@ -1,34 +1,105 @@
-.container{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 20px;
-    justify-content: center;
-    height:80vh
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  height: 100vh;
+  text-align: center;
+
+  background: linear-gradient(135deg, #0c0f0a, #1a2b22);
+  color: #e7fbe7;
+  animation: fadeIn 0.85s ease-in-out;
 }
-.form{
-width: 300px;
-display: flex;
-flex-direction: column;
-gap: 20px;
+
+.title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #53c28b;
+  text-shadow: 0 0 8px rgba(83, 194, 139, 0.6);
 }
-.input{
-    padding: 20px;
-    background-color: transparent;
-    border: 2px solid #bbb;
-    border-radius: 5px;
-    font-size: 20px;
-    color: #eee;
-    font-weight: bold;
+
+.form {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
-.button{
-    width: 300px;
-    padding: 20px;
-    cursor: pointer;
-    background-color: #53c28b;
-    border: none;
-    border-radius: 5px;
-    color: #eee;
-    font-weight: bold;
-    margin-bottom: 20px;
+
+.input {
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(83, 194, 139, 0.25);
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #e7fbe7;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input:focus {
+  border-color: #53c28b;
+  box-shadow: 0 0 12px rgba(83, 194, 139, 0.45);
+  outline: none;
+}
+
+.button {
+  width: 320px;
+  padding: 14px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.05rem;
+  border-radius: 10px;
+  border: none;
+  transition: all 0.3s ease;
+  color: #0c0f0a;
+  background: #53c28b;
+  box-shadow: 0 4px 15px rgba(83, 194, 139, 0.35);
+}
+
+.button:hover {
+  background: #44a976;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(83, 194, 139, 0.5);
+}
+
+.googleButton {
+  background: #ffffff;
+  color: #0c0f0a;
+}
+
+.googleButton:hover {
+  background: #e8e8e8;
+}
+
+.register {
+  font-size: 0.95rem;
+  color: #53c28b;
+  text-decoration: none;
+  opacity: 0.85;
+  transition: opacity 0.3s ease, text-shadow 0.3s ease;
+}
+
+.register:hover {
+  opacity: 1;
+  text-shadow: 0 0 6px rgba(83, 194, 139, 0.5);
+}
+
+.loading {
+  color: #53c28b;
+  font-size: 1.2rem;
+  text-shadow: 0 0 6px rgba(83, 194, 139, 0.5);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+@media (max-width: 480px) {
+  .form, .button {
+    width: 260px;
+  }
+  .title {
+    font-size: 2rem;
+  }
 }
