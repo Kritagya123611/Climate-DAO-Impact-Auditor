@@ -2,8 +2,6 @@
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import styles from "./page.module.css";
-
-// Toastify
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -13,7 +11,7 @@ const Wallet = () => {
   const [userType, setUserType] = useState(null);
   const [showForm, setShowForm] = useState(false);
 
-  // Form fields
+
   const [projectData, setProjectData] = useState({
     name: "",
     category: "",
