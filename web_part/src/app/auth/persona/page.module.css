@@ -1,0 +1,40 @@
+.dashboard {
+  margin: 40px auto;
+  padding: 30px;
+  max-width: 700px;
+  background: linear-gradient(135deg, #0c0f0a, #1a2b22);
+  color: #e7fbe7;
+  border-radius: 12px;
+  text-align: left;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #3bfcb3;
+  font-weight: bold;
+}
+
+.category,
+.description,
+.website {
+  font-size: 1rem;
+  margin: 12px 0;
+  line-height: 1.5;
+}
+
+.websiteLink {
+  color: #34eabf;
+  text-decoration: underline;
+  word-break: break-all;
+}
+
+.websiteLink:hover {
+  color: #62ffd6;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}

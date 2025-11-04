@@ -1,21 +1,17 @@
-import mongoose, { Schema } from "mongoose";
+import mongoose from "mongoose";
 
-const userSchema = new Schema({
-    name:{
-        type:String,
-        required:true,
-        unique:true
-    },
-     email:{
-        type:String,
-        required:true,
-        unique:true
-    },
-     password:{
-        type:String,
-        required:true,
-    },
+const userSchema = new mongoose.Schema({
+  name: {
+    type: String,
+  },
+  email: {
+    type: String,
+    unique: true,
+  },
+  image: {
+    type: String,
+  }
+}, { timestamps: true });
 
-},{timestamps:true})
-
-export default  mongoose.model("User",userSchema)
+// ✅ Prevent OverwriteModelError
+export default mongoose.models.User || mongoose.model("User", userSchema);
